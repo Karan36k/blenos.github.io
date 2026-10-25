@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://blenos.com/design-studio/">
   <meta property="og:title" content="BLENOS Design Studio | Spaces that feel like you">
   <meta property="og:description" content="Premium residential interiors, thoughtful design and turnkey project execution.">
-  <meta property="og:image" content="https://blenos.com/assets/blenos-logo.png">
+  <meta property="og:image" content="https://blenos.com/assets/blenos-studio-identity.jpg">
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +42,15 @@
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
   </style>
   <style>
+    .hero{--mx:75%;--my:40%}
+    .hero:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(420px circle at var(--mx) var(--my),#e9c77c24,transparent 70%);mix-blend-mode:screen}
+    .hero-image{background-image:linear-gradient(90deg,#11120f55,#11120f05 48%,#11120f26),linear-gradient(0deg,#11120f80,transparent 42%),url('../assets/blenos-studio-identity.jpg');background-position:center,center,center 44%;background-size:cover,cover,cover}
+    .division{--pointer-x:50%;--pointer-y:50%}
+    .division:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s;background:radial-gradient(260px circle at var(--pointer-x) var(--pointer-y),#efc8791c,transparent 72%)}
+    .division:hover:after,.division:focus-visible:after{opacity:1}
+    .service{--spot-x:50%;--spot-y:50%}
+    .service:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(320px circle at var(--spot-x) var(--spot-y),#e8c98a13,transparent 70%)}
+    .service:hover:before{opacity:1}
     .brand{display:flex;align-items:center;gap:9px;width:auto;height:auto;letter-spacing:0}
     .brand-mark{display:block;position:relative;flex:0 0 42px;width:42px;height:34px;overflow:hidden}
     .brand-mark img{display:block!important;width:42px!important;height:42px!important;object-fit:contain!important;object-position:center top!important;filter:drop-shadow(0 0 13px #efbd6945)}
@@ -72,7 +81,7 @@
         <div class="hero-actions"><a class="btn" href="#consultation">Shape your space <span>↗</span></a><a class="textlink" href="#work">Explore the design language</a></div>
         <div class="hero-meta"><span>DESIGN</span><span>IMPLEMENTATION</span><span>HANDOVER</span></div>
       </div>
-      <div class="hero-image" role="img" aria-label="Warm, contemporary luxury living room"></div>
+      <div class="hero-image" role="img" aria-label="BLENOS Design identity in a warm, gold-lit studio"></div>
       <div class="hero-stamp" aria-label="Free online consultation"><span>ONLINE CONSULT<br><b>FREE</b></span></div>
       <div class="offer"><div class="offerlabel">A considered first step</div><strong>Expert site visit for <span>₹299</span></strong><small>Includes a free online consultation. Start with a conversation about your home.</small><button type="button" class="offer-open">See what’s included <span>↗</span></button></div>
     </section>
@@ -273,6 +282,15 @@
       hero.style.setProperty("--mx", (event.clientX - rect.left) + "px");
       hero.style.setProperty("--my", (event.clientY - rect.top) + "px");
     });
+    if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+      document.querySelectorAll(".service, .division").forEach(card => card.addEventListener("pointermove", event => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty("--spot-x", (event.clientX - rect.left) + "px");
+        card.style.setProperty("--spot-y", (event.clientY - rect.top) + "px");
+        card.style.setProperty("--pointer-x", (event.clientX - rect.left) + "px");
+        card.style.setProperty("--pointer-y", (event.clientY - rect.top) + "px");
+      }));
+    }
 
     function showStatus(message, state) { statusBox.textContent = message; statusBox.className = "formstatus show" + (state ? " " + state : ""); }
     function finishSubmission() { clearTimeout(submissionTimeout); activeRequestId = null; submitBtn.disabled = false; submitBtn.innerHTML = 'Request a call back <span>↗</span>'; }
