@@ -18,6 +18,30 @@
     @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}@media(max-width:650px){.wrap{width:calc(100% - 34px)}.nav{height:72px}.brand{width:120px;height:64px}.nav-label{display:none}main{padding:65px 0 45px}.intro{margin-bottom:34px}.intro h1{font-size:clamp(48px,14vw,70px)}.intro p{font-size:14px}.division-grid{grid-template-columns:1fr;gap:12px}.division{min-height:195px;padding:23px}.division h2{margin-top:14px}.footer{align-items:flex-start;flex-direction:column}.nav-cta{font-size:11px;padding:10px 12px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
   </style>
+  <style>
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{height:100svh;min-height:0;display:flex;flex-direction:column}
+    .topline{flex:0 0 3px}
+    .nav{flex:0 0 76px;height:76px}
+    main{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(14px,3.5svh,34px) 0}
+    .intro{flex:none;margin-bottom:clamp(16px,3svh,28px)}
+    .intro h1{font-size:clamp(46px,7.2vw,78px);margin:13px 0 12px}
+    .division-grid{flex:none;width:min(100%,940px);grid-template-rows:repeat(2,minmax(0,1fr));gap:clamp(10px,1.8svh,15px)}
+    .division{height:clamp(150px,20svh,190px);min-height:0;padding:22px 26px}
+    .division h2{margin:13px 0 6px}
+    .division-foot{margin-top:13px}
+    .footer{flex:none;margin:clamp(13px,2svh,20px) auto 0;padding-top:12px}
+    @media(max-width:650px){
+      .wrap{width:calc(100% - 34px)}.nav{flex-basis:64px;height:64px}.brand{width:106px;height:60px}.nav-label{display:none}
+      main{padding:10px 0}.intro{margin-bottom:15px}.eyebrow{font-size:8px;letter-spacing:.18em}.eyebrow:before,.eyebrow:after{width:15px}
+      .intro h1{font-size:clamp(42px,12vw,54px);margin:9px 0 8px}.intro p{font-size:12px;line-height:1.4;max-width:370px}
+      .division-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.division{height:clamp(132px,17svh,148px);padding:12px 13px}
+      .division-head{gap:5px}.division-index{font-size:8px;letter-spacing:.13em}.division-state{padding:4px 5px;font-size:7px;letter-spacing:.08em;white-space:nowrap}
+      .division h2{font-size:clamp(15px,4.2vw,18px);line-height:1.1;margin:8px 0 5px}.division p{font-size:10px;line-height:1.3}.division-foot{font-size:7px;line-height:1.2;letter-spacing:.02em;margin-top:8px}.arrow{font-size:16px}
+      .footer{margin-top:12px;padding-top:8px;font-size:9px;flex-direction:row;align-items:center}
+    }
+    @media(max-width:350px){.wrap{width:calc(100% - 24px)}.nav-cta{font-size:9px;padding:8px}.division{padding:10px}.division-head{gap:3px}.division-index{font-size:7px}.division-state{padding:2px 3px;font-size:6px}.division h2{font-size:13px;margin:5px 0 3px}.division p{font-size:8px;line-height:1.2}.division-foot{font-size:6px;line-height:1;margin-top:5px}.arrow{font-size:14px}}
+  </style>
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -35,8 +59,8 @@
     <nav class="division-grid" aria-label="BLENOS studios">
       <a class="division active" href="design-studio/" aria-label="Explore BLENOS Design Studio">
         <div class="division-head"><span class="division-index">01 / SPACES</span><span class="division-state">Explore now</span></div>
-        <div><h2>BLENOS Design Studio</h2><p>Residential interiors, considered from first sketch through final handover.</p></div>
-        <div class="division-foot"><span>INTERIOR DESIGN · TURNKEY EXECUTION</span><span class="arrow" aria-hidden="true">↗</span></div>
+        <div><h2>BLENOS Design Studio</h2><p>Residential interiors, from first sketch to handover.</p></div>
+        <div class="division-foot"><span>INTERIORS · TURNKEY</span><span class="arrow" aria-hidden="true">↗</span></div>
       </a>
       <article class="division disabled" aria-disabled="true">
         <div class="division-head"><span class="division-index">02 / INTELLIGENCE</span><span class="division-state">Coming soon</span></div>

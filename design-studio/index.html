@@ -187,7 +187,7 @@
     }
     window.addEventListener("message", event => {
       const response = event.data;
-      if (event.source !== submissionFrame.contentWindow || !isAppsScriptResponseOrigin(event.origin) || !response || response.requestId !== activeRequestId) return;
+      if (!isAppsScriptResponseOrigin(event.origin) || !response || response.requestId !== activeRequestId) return;
       clearTimeout(submissionTimeout);
       if (response.ok === true) {
         showStatus("Thank you. Your enquiry has been received. Our team will contact you shortly.", "success");

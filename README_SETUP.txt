@@ -1,7 +1,7 @@
 BLENOS DESIGN WEBSITE — SETUP AND DEPLOYMENT
 
 Files:
-- index.html: BLENOS company hub; only Design Studio is selectable
+- index.html: BLENOS company hub; only Design Studio is selectable and the hub fits one screen
 - design-studio/index.html: responsive residential interior design website
 - assets/blenos-logo.png: selected transparent BLENOS Design logo from Downloads
 - Code.gs: Google Apps Script receiver for form submissions
@@ -9,7 +9,7 @@ Files:
 - .gitignore: excludes local and secret files
 
 GOOGLE SHEETS FORM STATUS
-The form endpoint is deployed and configured in design-studio/index.html. A synthetic test enquiry was verified in the private Leads worksheet and then removed; any pre-existing lead data was left untouched. A deliberately invalid request returned the expected validation error and did not append a row.
+The form endpoint is deployed and configured in design-studio/index.html. A synthetic test enquiry returned the success message and appeared in the private Leads worksheet, then its row was removed; any pre-existing lead data was left untouched. A deliberately invalid request returned the expected validation error and did not append a row.
 
 CONNECT THE FORM TO YOUR SHEET
 1. Open the target spreadsheet:
@@ -40,6 +40,6 @@ The visual theme uses a dark bronze and champagne palette, subtle reveal and poi
 GITHUB PAGES AND DOMAIN
 1. Push the site files, including CNAME, to the repository's main branch.
 2. In repository Settings -> Pages, publish from Deploy from a branch, branch `main`, folder `/ (root)`.
-3. The custom domain is `blenos.com`; apex and www DNS currently resolve to GitHub Pages, and GoDaddy CAA records permit Let's Encrypt. GitHub Pages had served a generic `*.github.io` certificate, so the custom domain was removed and re-added to restart certificate provisioning. When GitHub marks the certificate ready, enable Enforce HTTPS.
+3. The custom domain is `blenos.com`; apex and www DNS resolve to GitHub Pages, and GoDaddy CAA records permit Let's Encrypt. The GitHub Pages DNS check succeeded, Enforce HTTPS is enabled, and the certificate covers `blenos.com` and `www.blenos.com`.
 
 The GitHub Pages repository is https://github.com/Karan36k/blenos.github.io and the Pages hostname is Karan36k.github.io. The site is published from `main` and root.
