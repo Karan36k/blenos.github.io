@@ -6,7 +6,8 @@ Files:
 - CNAME: GitHub Pages custom domain (blenos.com)
 - .gitignore: excludes local and secret files
 
-IMPORTANT: The form will not write to your Google Sheet until you deploy Code.gs and configure the Web App URL in index.html. It only shows success after the script confirms the row was appended.
+GOOGLE SHEETS FORM STATUS
+The form endpoint is deployed and configured in index.html. A synthetic test enquiry was verified in the private Leads worksheet and then removed; the sheet now contains the headers only. A deliberately invalid request returned the expected validation error and did not append a row.
 
 CONNECT THE FORM TO YOUR SHEET
 1. Open the target spreadsheet:
@@ -18,8 +19,8 @@ CONNECT THE FORM TO YOUR SHEET
 6. Deploy and complete Google's authorization flow yourself.
 7. Copy the deployed Web App URL, which looks like:
    https://script.google.com/macros/s/DEPLOYMENT_ID/exec
-8. In index.html, update `SITE_CONFIG.googleScriptUrl` with that URL. Keep the URL private until deployment is intentional; do not add OAuth credentials or tokens to the site.
-9. Save and publish the site. Test with a clearly named test enquiry, confirm it appears in the first worksheet (gid 0), and remove only that test row afterward.
+8. In index.html, update `SITE_CONFIG.googleScriptUrl` if the deployment URL changes. The endpoint is intentionally public so website visitors can submit enquiries; it is not a credential. Never add OAuth credentials or tokens to the site.
+9. The current deployment ID is AKfycbwAXm7efC3ovXSKUJgx8U4GlNZjk7BC9n5SUb12i-0IIg2sozJSLW7MGIoejg73zAE9. Use Deploy -> Manage deployments to update this deployment when publishing code changes.
 
 The script appends submissions to worksheet gid 0, records the server-side submission time, and adds headers above existing content if the header row is blank. It validates required fields and protects text from formula injection. Do not change the sheet's sharing permissions for this setup.
 
@@ -33,11 +34,10 @@ CONTENT / CONTACT
 The website uses remote Unsplash photos and Google Fonts, so those elements need an internet connection. Replace the sample photos with your own project photography when available. The gallery uses illustrative imagery and does not represent claimed BLENOS projects.
 
 GITHUB PAGES AND DOMAIN
-1. Create or select a public GitHub repository intended for this website. Only publish after reviewing the files for private material.
+1. Create or select a public GitHub repository intended for this website. Only publish after reviewing the files for private material and receiving approval to make the files public.
 2. Push the site files, including CNAME, to the repository's main branch.
 3. In repository Settings -> Pages, publish from Deploy from a branch, branch `main`, folder `/ (root)`.
 4. In Custom domain, enter `blenos.com`; wait for DNS check and certificate provisioning, then enable Enforce HTTPS.
-5. In your DNS manager, inspect existing records first. Keep all unrelated email, verification and TXT records. For apex `@`, GitHub Pages documents four A records: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153. Optional AAAA records: 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153. For `www`, create a CNAME to the verified GitHub Pages hostname for the account (for example, `USERNAME.github.io`). Do not add records until existing DNS is inspected and conflicts are resolved.
-6. Set `www.blenos.com` to redirect to `blenos.com` using the registrar's forwarding feature after GitHub Pages DNS validation.
+5. Before changing DNS, inspect existing records. The current GoDaddy apex A record points to WebsiteBuilder, and `www` points to the apex; changing these will replace the current site target. Keep unrelated records, including `_domainconnect` and `_dmarc`. Make DNS changes only after approval. For apex `@`, use GitHub Pages A records 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153. Optional AAAA records: 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153. For `www`, use a CNAME to Karan36k.github.io; GitHub Pages can redirect `www` to the primary apex domain.
 
-The repository URL, GitHub username/Pages hostname, DNS zone, and deployed Apps Script endpoint still need to be verified in the relevant accounts. No deployment is complete until the public site, custom domain, HTTPS and form flow are verified.
+The GitHub account username and Pages hostname are Karan36k and Karan36k.github.io. No suitable BLENOS repository exists yet. The current GoDaddy site is still live; GitHub Pages has not been enabled, DNS has not been changed, and blenos.com has not been re-pointed to GitHub Pages.
