@@ -176,10 +176,18 @@
     });
     document.querySelectorAll("#navlinks a").forEach(a => a.addEventListener("click", () => document.getElementById("navlinks").classList.remove("open")));
 
-    const responseOrigins = new Set(["https://script.google.com", "https://script.googleusercontent.com"]);
+    function isAppsScriptResponseOrigin(origin) {
+      if (origin === "null" || origin === "https://script.google.com") return true;
+      try {
+        const hostname = new URL(origin).hostname;
+        return hostname === "script.googleusercontent.com" || hostname.endsWith("-script.googleusercontent.com");
+      } catch (_) {
+        return false;
+      }
+    }
     window.addEventListener("message", event => {
       const response = event.data;
-      if (!responseOrigins.has(event.origin) || !response || response.requestId !== activeRequestId) return;
+      if (event.source !== submissionFrame.contentWindow || !isAppsScriptResponseOrigin(event.origin) || !response || response.requestId !== activeRequestId) return;
       clearTimeout(submissionTimeout);
       if (response.ok === true) {
         showStatus("Thank you. Your enquiry has been received. Our team will contact you shortly.", "success");
