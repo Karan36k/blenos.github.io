@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#20231f" />
+  <meta name="description" content="BLENOS Design creates refined residential interiors with turnkey design and project execution across Delhi NCR. Bengaluru and Hyderabad projects are subject to availability." />
+  <title>BLENOS Design | Luxury Interiors, Thoughtfully Made</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#22241f;--muted:#6e7068;--paper:#f6f3ec;--white:#fffdf8;--olive:#777b5a;--line:#ded9ce;--gold:#b79a6a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+    .wrap{width:min(1180px,calc(100% - 44px));margin:auto}.topbar{background:var(--ink);color:#f8f4eb;font-size:12px;letter-spacing:.08em;padding:9px 0;text-align:center}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:Manrope,sans-serif;font-size:23px;font-weight:700;letter-spacing:.18em;line-height:1}.brand small{display:block;font-size:9px;font-weight:500;letter-spacing:.42em;text-align:center;margin-top:7px}.navlinks{display:flex;align-items:center;gap:30px;font-size:13px}.navlinks a:hover{color:var(--olive)}.navcta,.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;background:var(--ink);color:white;padding:14px 21px;border:1px solid var(--ink);font-size:13px;letter-spacing:.03em;cursor:pointer;transition:.2s}.navcta:hover,.btn:hover{background:var(--olive);border-color:var(--olive)}.menu{display:none;background:none;border:0;font-size:24px}
+    .hero{position:relative;min-height:620px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:#ded5c5}.hero-copy{padding:86px 7vw 78px max(22px,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--olive);font-weight:700}.hero h1{font-family:Manrope,sans-serif;font-size:clamp(42px,5vw,68px);line-height:1.06;letter-spacing:-.055em;font-weight:500;margin:20px 0 20px;max-width:590px}.hero h1 em{font-family:Georgia,serif;font-weight:400}.hero p{max-width:460px;color:#55574f;font-size:16px;margin:0 0 28px}.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.textlink{font-size:13px;border-bottom:1px solid var(--ink);padding:8px 0}.hero-image{min-height:620px;background:linear-gradient(90deg,rgba(30,28,23,.05),rgba(30,28,23,0)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=85') center/cover}.offer{position:absolute;right:calc(max(22px,(100vw - 1180px)/2) + 30px);bottom:30px;background:var(--white);padding:20px 23px;max-width:300px;box-shadow:0 12px 40px #29251b20}.offer .offerlabel{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--olive);font-weight:700}.offer strong{display:block;font-family:Manrope,sans-serif;font-size:24px;line-height:1.25;margin:7px 0}.offer strong span{color:var(--olive)}.offer small{color:var(--muted);font-size:12px}
+    .trust{background:var(--white);border-bottom:1px solid var(--line)}.trustgrid{display:grid;grid-template-columns:repeat(4,1fr);padding:25px 0}.trustitem{padding:4px 22px;border-right:1px solid var(--line)}.trustitem:first-child{padding-left:0}.trustitem:last-child{border:0}.trustitem b{font-family:Manrope,sans-serif;font-size:14px;font-weight:600;display:block}.trustitem span{font-size:12px;color:var(--muted)}
+    section{padding:92px 0}.sectionhead{max-width:650px;margin-bottom:38px}.sectionhead h2{font-family:Manrope,sans-serif;font-weight:500;letter-spacing:-.045em;font-size:clamp(31px,4vw,47px);line-height:1.15;margin:12px 0 14px}.sectionhead p{color:var(--muted);margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:var(--white);border:1px solid var(--line);padding:28px;min-height:220px}.service .num{font-size:11px;letter-spacing:.12em;color:var(--gold)}.service h3{font-family:Manrope,sans-serif;font-weight:600;font-size:20px;margin:25px 0 9px}.service p{font-size:13px;color:var(--muted);margin:0}.gallery{background:#e9e4da}.gallerygrid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:14px;height:410px}.galleryphoto{background-size:cover;background-position:center;position:relative;overflow:hidden}.galleryphoto:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#1819149c)}.galleryphoto span{position:absolute;bottom:19px;left:20px;color:white;z-index:1;font-size:13px;letter-spacing:.04em}.galleryphoto.one{background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85')}.galleryphoto.two{background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85')}.galleryphoto.three{background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=85')}
+    .processgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}.step{border-top:1px solid var(--gold);padding-top:18px}.step .stepnum{font-size:11px;color:var(--olive);letter-spacing:.12em}.step h3{font-family:Manrope,sans-serif;font-weight:600;font-size:17px;margin:12px 0 7px}.step p{font-size:13px;color:var(--muted);margin:0}.locationband{background:var(--ink);color:#f8f4eb;padding:52px 0}.locationflex{display:flex;align-items:center;justify-content:space-between;gap:40px}.locationflex h2{font-family:Manrope,sans-serif;font-weight:500;font-size:30px;margin:8px 0}.locationflex p{color:#c9c8bd;font-size:13px;max-width:520px;margin:0}.pills{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end;max-width:450px}.pill{border:1px solid #65665d;padding:8px 12px;font-size:12px;color:#e7e2d6}.contact{background:var(--white)}.contactgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}.contactintro h2{font-family:Manrope,sans-serif;font-size:clamp(34px,4vw,48px);font-weight:500;letter-spacing:-.045em;line-height:1.1;margin:13px 0 18px}.contactintro p{color:var(--muted);font-size:14px}.contactinfo{margin-top:30px;display:grid;gap:14px;font-size:14px}.contactinfo span{color:var(--muted);display:block;font-size:11px;text-transform:uppercase;letter-spacing:.13em}.formbox{background:var(--paper);padding:32px;border:1px solid var(--line)}.formbox h3{font-family:Manrope,sans-serif;font-size:23px;font-weight:600;margin:0 0 5px}.formbox>p{font-size:13px;color:var(--muted);margin:0 0 23px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:600}.field input,.field select,.field textarea{width:100%;border:1px solid #d4cfc3;background:var(--white);padding:13px 12px;outline:none;border-radius:0;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--olive)}.field textarea{min-height:110px;resize:vertical}.formnote{font-size:11px;color:var(--muted);margin:14px 0}.formbox .btn{width:100%;margin-top:5px}.formstatus{font-size:13px;margin-top:13px;display:none}.formstatus.show{display:block}.formstatus.success{color:#42613b}.formstatus.error{color:#9b302b}.formbox .btn:disabled{opacity:.65;cursor:wait}.honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}.foot{background:#191b17;color:#e9e4d9;padding:28px 0}.footflex{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot .brand{font-size:17px}.foot p{font-size:11px;color:#bcbdb3;margin:0}.footlinks{display:flex;gap:18px;font-size:12px;color:#ded9ce}
+    @media(max-width:850px){.navlinks{display:none;position:absolute;top:82px;left:0;right:0;background:var(--paper);padding:22px;flex-direction:column;align-items:flex-start;z-index:5;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navcta{display:none}.menu{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:65px 25px 80px}.hero-image{min-height:360px}.offer{right:20px;bottom:20px}.trustgrid{grid-template-columns:1fr 1fr;gap:18px}.trustitem{border:0;padding:0!important}.services{grid-template-columns:1fr}.gallerygrid{height:auto;grid-template-columns:1fr 1fr}.galleryphoto{height:250px}.galleryphoto.one{grid-column:1/-1;height:310px}.processgrid{grid-template-columns:1fr 1fr}.locationflex{align-items:flex-start;flex-direction:column}.pills{justify-content:flex-start}.contactgrid{grid-template-columns:1fr;gap:35px}.footflex{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.wrap{width:calc(100% - 32px)}.hero h1{font-size:43px}.hero-image{min-height:300px}.offer{max-width:260px;padding:15px}.trustgrid{padding:20px 0}.trustitem b{font-size:13px}.trustitem span{font-size:11px}section{padding:65px 0}.gallerygrid{grid-template-columns:1fr}.galleryphoto,.galleryphoto.one{height:260px;grid-column:auto}.processgrid{grid-template-columns:1fr}.formbox{padding:22px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.locationband{padding:40px 0}}
+  </style>
+</head>
+<body>
+  <div class="topbar">LUXURY INTERIORS, THOUGHTFULLY MADE &nbsp;·&nbsp; FREE ONLINE CONSULTATION + SITE VISIT FOR ₹299</div>
+  <header class="wrap nav">
+    <a class="brand" href="#" aria-label="BLENOS Design home">BLENOS<small>DESIGN</small></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#services">What we do</a><a href="#work">Our style</a><a href="#process">Our process</a><a href="#locations">Locations</a>
+    </nav>
+    <a class="navcta" href="#consultation">Book a consultation ↗</a>
+    <button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" style="padding:0">
+      <div class="hero-copy">
+        <div class="eyebrow">Considered spaces. Exceptional living.</div>
+        <h1>Luxury interiors.<br><em>Made personal.</em></h1>
+        <p>From the first sketch to the final finish, BLENOS Design brings your residential interior vision to life with thoughtful design, premium materials and turnkey project execution.</p>
+        <div class="hero-actions"><a class="btn" href="#consultation">Start your project <span>↗</span></a><a class="textlink" href="#work">Explore our approach</a></div>
+      </div>
+      <div class="hero-image" role="img" aria-label="Warm, contemporary luxury living room"></div>
+      <div class="offer"><div class="offerlabel">Limited-time introduction</div><strong>Expert site visit for <span>₹299</span></strong><small>Includes a free online consultation. Plan your next space with our team.</small></div>
+    </section>
+
+    <div class="trust"><div class="wrap trustgrid">
+      <div class="trustitem"><b>Design to delivery</b><span>One team, end to end</span></div>
+      <div class="trustitem"><b>Tailored to you</b><span>Spaces shaped around your life</span></div>
+      <div class="trustitem"><b>Premium finishes</b><span>Materials with lasting appeal</span></div>
+      <div class="trustitem"><b>Across key cities</b><span>NCR, Bengaluru & Hyderabad*</span></div>
+    </div></div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="sectionhead"><div class="eyebrow">What we do</div><h2>Every detail, considered.</h2><p>Beautiful interiors are more than a look. We balance how a space feels, functions and comes together in real life.</p></div>
+        <div class="services">
+          <article class="service"><div class="num">01 / DESIGN</div><h3>Interior design</h3><p>Layouts, concepts, colour stories, lighting and material selections built around your taste and everyday needs.</p></article>
+          <article class="service"><div class="num">02 / IMPLEMENTATION</div><h3>Turnkey project execution</h3><p>From civil work and carpentry to finishes and installation, coordinated with care from start to handover.</p></article>
+          <article class="service"><div class="num">03 / THE FINISHING TOUCH</div><h3>Furniture & styling</h3><p>Thoughtfully selected furniture, décor, textures and finishing details that make a space feel complete.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="work">
+      <div class="wrap">
+        <div class="sectionhead"><div class="eyebrow">A point of view</div><h2>Warm minimalism. Timeless character.</h2><p>Natural materials, layered lighting, tactile finishes and a restrained palette—designed to feel elevated, never overdone.</p></div>
+        <div class="gallerygrid">
+          <div class="galleryphoto one"><span>Living spaces</span></div>
+          <div class="galleryphoto two"><span>Quiet luxury</span></div>
+          <div class="galleryphoto three"><span>Details that matter</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="sectionhead"><div class="eyebrow">The BLENOS process</div><h2>From idea to move-in.</h2><p>A clear, collaborative process keeps your project moving and your decisions grounded.</p></div>
+        <div class="processgrid">
+          <div class="step"><div class="stepnum">STEP 01</div><h3>Tell us what you need</h3><p>Share your space, style, goals and approximate timeline.</p></div>
+          <div class="step"><div class="stepnum">STEP 02</div><h3>Consult & plan</h3><p>Discuss ideas with our team and understand the next steps.</p></div>
+          <div class="step"><div class="stepnum">STEP 03</div><h3>Design & refine</h3><p>Develop the concept, selections and project scope together.</p></div>
+          <div class="step"><div class="stepnum">STEP 04</div><h3>Bring it to life</h3><p>Coordinate implementation, finishes and the final details.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="locationband" id="locations">
+      <div class="wrap locationflex">
+        <div><div class="eyebrow" style="color:#c7b58f">Where we work</div><h2>Local understanding. Thoughtful design.</h2><p>Serving Delhi, Noida, Gurugram and the wider NCR region, with availability in Bengaluru and Hyderabad on a limited basis.</p></div>
+        <div class="pills"><span class="pill">Delhi</span><span class="pill">Noida</span><span class="pill">Gurugram</span><span class="pill">Full NCR</span><span class="pill">Bengaluru*</span><span class="pill">Hyderabad*</span></div>
+      </div>
+    </section>
+
+    <section class="contact" id="consultation">
+      <div class="wrap contactgrid">
+        <div class="contactintro"><div class="eyebrow">Your project starts here</div><h2>Let’s make room for better living.</h2><p>Tell us a little about your project. We’ll get in touch to understand your needs and arrange the next step.</p>
+          <div class="contactinfo"><div><span>Email</span><a data-contact-email href="mailto:">Email BLENOS Design</a></div><div><span>Call us</span><a data-contact-phone href="tel:">Call BLENOS Design</a></div><div><span>Limited-time offer</span>Free online consultation + expert site visit for ₹299</div></div>
+        </div>
+        <div class="formbox">
+          <h3>Book your consultation</h3><p>Share your details and our team will contact you.</p>
+          <form id="leadForm" novalidate>
+            <div class="formgrid">
+              <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required placeholder="Your name"></div>
+              <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+() .-]{8,18}" placeholder="+91 00000 00000"></div>
+              <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+              <div class="field"><label for="location">Project location *</label><select id="location" name="location" required><option value="">Select your city</option><option>Delhi</option><option>Noida</option><option>Gurugram</option><option>Other NCR</option><option>Bengaluru</option><option>Hyderabad</option><option>Other</option></select></div>
+              <div class="field full"><label for="requirement">Tell us about your requirements *</label><textarea id="requirement" name="requirement" required placeholder="E.g. 3 BHK apartment, complete interiors, preferred style, approximate timeline..."></textarea></div>
+            </div>
+            <div class="honeypot" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+            <p class="formnote">By submitting, you agree that BLENOS Design may contact you about this enquiry. *Bengaluru and Hyderabad projects are subject to availability.</p>
+            <button class="btn" id="submitBtn" type="submit">Request a call back <span>↗</span></button>
+            <div class="formstatus" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot"><div class="wrap footflex"><a class="brand" href="#">BLENOS<small>DESIGN</small></a><p>© <span id="year"></span> BLENOS Design. Designed for living.</p><div class="footlinks"><a data-contact-email data-label="Email" href="mailto:">Email</a><a data-contact-phone data-label="Call" href="tel:">Call</a><a href="#consultation">Enquire</a></div></div></footer>
+  <iframe id="submissionFrame" name="submissionFrame" title="Form submission response" hidden></iframe>
+  <form id="submissionTransport" method="post" target="submissionFrame" hidden><input name="requestId"><input name="name"><input name="phone"><input name="email"><input name="location"><input name="requirement"><input name="website"></form>
+
+  <script>
+    // Update the phone here once; all visible call links use this setting.
+    const SITE_CONFIG = { phone: "+91 85560 59020", email: "blenosindia@gmail.com", googleScriptUrl: "PASTE_YOUR_DEPLOYED_APPS_SCRIPT_WEB_APP_URL_HERE" };
+    const form = document.getElementById("leadForm");
+    const statusBox = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
+    const submissionFrame = document.getElementById("submissionFrame");
+    const submissionTransport = document.getElementById("submissionTransport");
+    let activeRequestId = null;
+    let submissionTimeout = null;
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll("[data-contact-phone]").forEach(link => { link.href = `tel:${SITE_CONFIG.phone.replace(/[^0-9+]/g, "")}`; link.textContent = link.dataset.label || SITE_CONFIG.phone; });
+    document.querySelectorAll("[data-contact-email]").forEach(link => { link.href = `mailto:${SITE_CONFIG.email}`; link.textContent = link.dataset.label || SITE_CONFIG.email; });
+    document.getElementById("menuBtn").addEventListener("click", event => {
+      const expanded = event.currentTarget.getAttribute("aria-expanded") === "true";
+      event.currentTarget.setAttribute("aria-expanded", String(!expanded));
+      event.currentTarget.setAttribute("aria-label", expanded ? "Open menu" : "Close menu");
+      document.getElementById("navlinks").classList.toggle("open", !expanded);
+    });
+    document.querySelectorAll("#navlinks a").forEach(a => a.addEventListener("click", () => document.getElementById("navlinks").classList.remove("open")));
+
+    window.addEventListener("message", event => {
+      const response = event.data;
+      if (event.source !== submissionFrame.contentWindow || !response || response.requestId !== activeRequestId) return;
+      clearTimeout(submissionTimeout);
+      if (response.ok === true) {
+        showStatus("Thank you. Your enquiry has been received. Our team will contact you shortly.", "success");
+        form.reset();
+      } else {
+        showStatus("We couldn't submit your enquiry. Please try again or email " + SITE_CONFIG.email + " or call " + SITE_CONFIG.phone + ".", "error");
+      }
+      finishSubmission();
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      if (!/^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(SITE_CONFIG.googleScriptUrl)) {
+        showStatus("The enquiry form is not connected yet. Please email " + SITE_CONFIG.email + " or call " + SITE_CONFIG.phone + ".", "error");
+        return;
+      }
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+      showStatus("Sending your enquiry securely…", "");
+      activeRequestId = crypto.randomUUID();
+      submissionTransport.action = SITE_CONFIG.googleScriptUrl;
+      const values = new FormData(form);
+      for (const field of submissionTransport.elements) {
+        field.value = field.name === "requestId" ? activeRequestId : (values.get(field.name) || "");
+      }
+      submissionTimeout = setTimeout(() => {
+        showStatus("We couldn't confirm your enquiry was saved. Please try again or email " + SITE_CONFIG.email + " or call " + SITE_CONFIG.phone + ".", "error");
+        finishSubmission();
+      }, 25000);
+      submissionTransport.submit();
+    });
+
+    function showStatus(message, state) { statusBox.textContent = message; statusBox.className = "formstatus show" + (state ? " " + state : ""); }
+    function finishSubmission() { clearTimeout(submissionTimeout); activeRequestId = null; submitBtn.disabled = false; submitBtn.innerHTML = 'Request a call back <span>↗</span>'; }
+  </script>
+</body>
+</html>
