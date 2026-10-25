@@ -199,17 +199,23 @@
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending…";
       showStatus("Sending your enquiry securely…", "");
-      activeRequestId = crypto.randomUUID();
-      submissionTransport.action = SITE_CONFIG.googleScriptUrl;
-      const values = new FormData(form);
-      for (const field of submissionTransport.elements) {
-        field.value = field.name === "requestId" ? activeRequestId : (values.get(field.name) || "");
-      }
-      submissionTimeout = setTimeout(() => {
-        showStatus("We couldn't confirm your enquiry was saved. Please try again or email " + SITE_CONFIG.email + " or call " + SITE_CONFIG.phone + ".", "error");
+      try {
+        activeRequestId = createRequestId();
+        submissionTransport.action = SITE_CONFIG.googleScriptUrl;
+        const values = new FormData(form);
+        for (const field of submissionTransport.elements) {
+          field.value = field.name === "requestId" ? activeRequestId : (values.get(field.name) || "");
+        }
+        submissionTimeout = setTimeout(() => {
+          showStatus("We couldn't confirm your enquiry was saved. Please try again or email " + SITE_CONFIG.email + " or call " + SITE_CONFIG.phone + ".", "error");
+          finishSubmission();
+        }, 25000);
+        submissionTransport.submit();
+      } catch (error) {
+        console.error("Enquiry submission could not be started.", error);
+        showStatus("We couldn't start your enquiry. Please try again or email " + SITE_CONFIG.email + " or call " + SITE_CONFIG.phone + ".", "error");
         finishSubmission();
-      }, 25000);
-      submissionTransport.submit();
+      }
     });
 
     // Page-one offer popup: shown once per browser session and always dismissible.
@@ -252,6 +258,16 @@
 
     function showStatus(message, state) { statusBox.textContent = message; statusBox.className = "formstatus show" + (state ? " " + state : ""); }
     function finishSubmission() { clearTimeout(submissionTimeout); activeRequestId = null; submitBtn.disabled = false; submitBtn.innerHTML = 'Request a call back <span>↗</span>'; }
+    function createRequestId() {
+      if (window.crypto && typeof window.crypto.randomUUID === "function") return window.crypto.randomUUID();
+      if (window.crypto && typeof window.crypto.getRandomValues === "function") {
+        const bytes = new Uint8Array(16);
+        window.crypto.getRandomValues(bytes);
+        return Array.from(bytes, byte => byte.toString(16).padStart(2, "0")).join("");
+      }
+      // This is only a response-correlation ID, not an authentication secret.
+      return Date.now().toString(16) + "-" + Math.random().toString(16).slice(2) + "-" + Math.random().toString(16).slice(2);
+    }
   </script>
 </body>
 </html>
