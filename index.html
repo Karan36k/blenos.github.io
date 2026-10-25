@@ -176,9 +176,10 @@
     });
     document.querySelectorAll("#navlinks a").forEach(a => a.addEventListener("click", () => document.getElementById("navlinks").classList.remove("open")));
 
+    const responseOrigins = new Set(["https://script.google.com", "https://script.googleusercontent.com"]);
     window.addEventListener("message", event => {
       const response = event.data;
-      if (event.source !== submissionFrame.contentWindow || !response || response.requestId !== activeRequestId) return;
+      if (!responseOrigins.has(event.origin) || !response || response.requestId !== activeRequestId) return;
       clearTimeout(submissionTimeout);
       if (response.ok === true) {
         showStatus("Thank you. Your enquiry has been received. Our team will contact you shortly.", "success");
