@@ -7,9 +7,10 @@
   <meta name="description" content="BLENOS Design creates refined residential interiors with turnkey design and project execution across Delhi NCR. Bengaluru and Hyderabad projects are subject to availability." />
   <title>BLENOS Design Studio | Luxury Interiors, Thoughtfully Made</title>
   <link rel="icon" type="image/png" href="../assets/blenos-logo.png">
+  <link rel="canonical" href="https://blenos.com/design-studio/">
   <meta property="og:title" content="BLENOS Design Studio | Spaces that feel like you">
   <meta property="og:description" content="Premium residential interiors, thoughtful design and turnkey project execution.">
-  <meta property="og:image" content="../assets/blenos-logo.png">
+  <meta property="og:image" content="https://blenos.com/assets/blenos-logo.png">
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,12 +41,21 @@
     @media(max-width:520px){.wrap{width:calc(100% - 34px)}.brand{width:116px;height:66px}.topbar{font-size:9px;letter-spacing:.11em}.hero-copy{padding:68px 23px 235px}.hero h1{font-size:clamp(45px,13vw,64px)}.hero p{font-size:14px}.hero-actions{align-items:flex-start;flex-direction:column;gap:9px}.hero-meta{font-size:9px;gap:10px}.hero-meta span+span{padding-left:10px}.hero-stamp{bottom:180px;right:18px;width:78px;height:78px;font-size:9px}.hero-stamp b{font-size:17px}.offer{left:17px;right:17px;bottom:17px;width:auto;max-width:none;padding:15px 17px}.offer strong{font-size:21px}.offer small{font-size:11px}.trustgrid{padding:20px 0}.service{padding:23px}.gallerygrid{grid-template-columns:1fr}.galleryphoto.one,.galleryphoto{height:245px;grid-column:auto}.processgrid{grid-template-columns:1fr}.locationflex h2{font-size:27px}.formbox{padding:22px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.dialog-inner{padding:34px 24px 25px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
   </style>
+  <style>
+    .brand{display:flex;align-items:center;gap:9px;width:auto;height:auto;letter-spacing:0}
+    .brand-mark{display:block;position:relative;flex:0 0 42px;width:42px;height:34px;overflow:hidden}
+    .brand-mark img{display:block!important;width:42px!important;height:42px!important;object-fit:contain!important;object-position:center top!important;filter:drop-shadow(0 0 13px #efbd6945)}
+    .brand-name{font-family:Manrope,sans-serif;font-size:15px;font-weight:700;letter-spacing:.2em;color:#f3efe5;white-space:nowrap}
+    .brand-name small{display:block;margin-top:5px;text-align:left;font-size:7px;font-weight:500;letter-spacing:.23em;color:#bdb9ad}
+    .gallery-note{margin:14px 0 0;color:#64665f;font-size:11px;letter-spacing:.02em}
+    @media(max-width:850px){.brand{width:auto;height:auto}.brand-mark{flex-basis:36px;width:36px;height:30px}.brand-mark img{width:36px!important;height:36px!important}.brand-name{font-size:13px}}
+  </style>
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <div class="topbar">FREE ONLINE CONSULTATION &nbsp;·&nbsp; EXPERT SITE VISIT FOR ₹299 &nbsp;·&nbsp; DELHI NCR + SELECT CITIES</div>
   <header class="wrap nav">
-    <a class="brand" href="../index.html" aria-label="BLENOS home"><img src="../assets/blenos-logo.png" alt="BLENOS Design"></a>
+    <a class="brand" href="../index.html" aria-label="BLENOS home"><span class="brand-mark"><img src="../assets/blenos-logo.png" alt=""></span><span class="brand-name">BLENOS<small>DESIGN STUDIO</small></span></a>
     <nav class="navlinks" id="navlinks">
       <a href="#services">What we do</a><a href="#work">Our style</a><a href="#process">Our process</a><a href="#locations">Locations</a>
     </nav>
@@ -93,6 +103,7 @@
           <div class="galleryphoto two"><span>Quiet luxury</span></div>
           <div class="galleryphoto three"><span>Details that matter</span></div>
         </div>
+        <p class="gallery-note">Illustrative interiors; these images are not completed BLENOS projects.</p>
       </div>
     </section>
 
@@ -124,11 +135,11 @@
           <h3>Book your consultation</h3><p>Share your details and our team will contact you.</p>
           <form id="leadForm" novalidate>
             <div class="formgrid">
-              <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required placeholder="Your name"></div>
-              <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+() .-]{8,18}" placeholder="+91 00000 00000"></div>
-              <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+              <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required maxlength="120" placeholder="Your name"></div>
+              <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" pattern="[0-9+() .-]{8,30}" placeholder="+91 00000 00000"></div>
+              <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></div>
               <div class="field"><label for="location">Project location *</label><select id="location" name="location" required><option value="">Select your city</option><option>Delhi</option><option>Noida</option><option>Gurugram</option><option>Other NCR</option><option>Bengaluru</option><option>Hyderabad</option><option>Other</option></select></div>
-              <div class="field full"><label for="requirement">Tell us about your requirements *</label><textarea id="requirement" name="requirement" required placeholder="E.g. 3 BHK apartment, complete interiors, preferred style, approximate timeline..."></textarea></div>
+              <div class="field full"><label for="requirement">Tell us about your requirements *</label><textarea id="requirement" name="requirement" required maxlength="3000" placeholder="E.g. 3 BHK apartment, complete interiors, preferred style, approximate timeline..."></textarea></div>
             </div>
             <div class="honeypot" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
             <p class="formnote">By submitting, you agree that BLENOS Design may contact you about this enquiry. *Bengaluru and Hyderabad projects are subject to availability.</p>
@@ -139,7 +150,7 @@
       </div>
     </section>
   </main>
-  <footer class="foot"><div class="wrap footflex"><a class="brand" href="../index.html" aria-label="BLENOS home"><img src="../assets/blenos-logo.png" alt="BLENOS Design"></a><p>© <span id="year"></span> BLENOS Design. Designed for living.</p><div class="footlinks"><a data-contact-email data-label="Email" href="mailto:">Email</a><a data-contact-phone data-label="Call" href="tel:">Call</a><a href="#consultation">Enquire</a></div></div></footer>
+  <footer class="foot"><div class="wrap footflex"><a class="brand" href="../index.html" aria-label="BLENOS home"><span class="brand-mark"><img src="../assets/blenos-logo.png" alt=""></span><span class="brand-name">BLENOS<small>DESIGN STUDIO</small></span></a><p>© <span id="year"></span> BLENOS Design. Designed for living.</p><div class="footlinks"><a data-contact-email data-label="Email" href="mailto:">Email</a><a data-contact-phone data-label="Call" href="tel:">Call</a><a href="#consultation">Enquire</a></div></div></footer>
   <dialog class="offer-dialog" id="offerDialog" aria-labelledby="offerTitle">
     <div class="dialog-inner">
       <button class="dialog-close" type="button" aria-label="Close offer details">×</button>
@@ -168,13 +179,15 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.querySelectorAll("[data-contact-phone]").forEach(link => { link.href = `tel:${SITE_CONFIG.phone.replace(/[^0-9+]/g, "")}`; link.textContent = link.dataset.label || SITE_CONFIG.phone; });
     document.querySelectorAll("[data-contact-email]").forEach(link => { link.href = `mailto:${SITE_CONFIG.email}`; link.textContent = link.dataset.label || SITE_CONFIG.email; });
-    document.getElementById("menuBtn").addEventListener("click", event => {
-      const expanded = event.currentTarget.getAttribute("aria-expanded") === "true";
-      event.currentTarget.setAttribute("aria-expanded", String(!expanded));
-      event.currentTarget.setAttribute("aria-label", expanded ? "Open menu" : "Close menu");
-      document.getElementById("navlinks").classList.toggle("open", !expanded);
-    });
-    document.querySelectorAll("#navlinks a").forEach(a => a.addEventListener("click", () => document.getElementById("navlinks").classList.remove("open")));
+    const menuBtn = document.getElementById("menuBtn");
+    const navlinks = document.getElementById("navlinks");
+    const setMenuOpen = open => {
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      navlinks.classList.toggle("open", open);
+    };
+    menuBtn.addEventListener("click", () => setMenuOpen(menuBtn.getAttribute("aria-expanded") !== "true"));
+    navlinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenuOpen(false)));
 
     function isAppsScriptResponseOrigin(origin) {
       if (origin === "null" || origin === "https://script.google.com") return true;
@@ -229,17 +242,13 @@
 
     // Page-one offer popup: shown once per browser session and always dismissible.
     const offerDialog = document.getElementById("offerDialog");
-    const showOffer = () => { if (!offerDialog.open) offerDialog.showModal(); try { sessionStorage.setItem("blenosOfferSeen", "1"); } catch (_) {} };
+    const showOffer = () => { if (!offerDialog.open) offerDialog.showModal(); };
     const closeOffer = () => offerDialog.close();
     document.querySelector(".offer-open").addEventListener("click", showOffer);
     document.querySelector(".dialog-close").addEventListener("click", closeOffer);
     document.querySelector(".dialog-dismiss").addEventListener("click", closeOffer);
     offerDialog.addEventListener("click", event => { if (event.target === offerDialog) closeOffer(); });
     document.querySelector(".dialog-actions .btn").addEventListener("click", closeOffer);
-    let offerAlreadySeen = false;
-    try { offerAlreadySeen = sessionStorage.getItem("blenosOfferSeen") === "1"; } catch (_) {}
-    if (!offerAlreadySeen) window.setTimeout(showOffer, 4800);
-
     // Subtle scroll reveals and a warm pointer glow; all motion respects reduced-motion settings.
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const progress = document.getElementById("scrollProgress");

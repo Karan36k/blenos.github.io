@@ -3,7 +3,7 @@ BLENOS DESIGN WEBSITE — SETUP AND DEPLOYMENT
 Files:
 - index.html: BLENOS company hub; only Design Studio is selectable and the hub fits one screen
 - design-studio/index.html: responsive residential interior design website
-- assets/blenos-logo.png: selected transparent BLENOS Design logo from Downloads
+- assets/blenos-logo.png: only BLENOS-specific logo asset found in Downloads; shown as a cropped emblem beside a readable wordmark
 - Code.gs: Google Apps Script receiver for form submissions
 - CNAME: GitHub Pages custom domain (blenos.com)
 - .gitignore: excludes local and secret files
@@ -35,7 +35,7 @@ CONTENT / CONTACT
 
 The website uses remote Unsplash photos and Google Fonts, so those elements need an internet connection. Replace the sample photos with your own project photography when available. The gallery uses illustrative imagery and does not represent claimed BLENOS projects.
 
-The visual theme uses a dark bronze and champagne palette, subtle reveal and pointer animations, a reading progress line, and a one-time consultation offer dialog. Animations follow the visitor's reduced-motion setting; the offer can be closed or reopened from its hero card.
+The visual theme uses a dark bronze and champagne palette, subtle reveal and pointer animations, a reading progress line, and an offer dialog opened by the visitor from the hero card. The offer no longer interrupts visitors on page load. Animations follow the visitor's reduced-motion setting. Portfolio images are labeled as illustrative, not completed BLENOS projects.
 
 GITHUB PAGES AND DOMAIN
 1. Push the site files, including CNAME, to the repository's main branch.
