@@ -2,6 +2,7 @@ BLENOS DESIGN WEBSITE — SETUP AND DEPLOYMENT
 
 Files:
 - index.html: responsive single-page website
+- assets/blenos-logo.png: selected transparent BLENOS Design logo from Downloads
 - Code.gs: Google Apps Script receiver for form submissions
 - CNAME: GitHub Pages custom domain (blenos.com)
 - .gitignore: excludes local and secret files
@@ -32,6 +33,8 @@ CONTENT / CONTACT
 - Offer: Free online consultation + expert site visit for ₹299
 
 The website uses remote Unsplash photos and Google Fonts, so those elements need an internet connection. Replace the sample photos with your own project photography when available. The gallery uses illustrative imagery and does not represent claimed BLENOS projects.
+
+The visual theme uses a dark bronze and champagne palette, subtle reveal and pointer animations, a reading progress line, and a one-time consultation offer dialog. Animations follow the visitor's reduced-motion setting; the offer can be closed or reopened from its hero card.
 
 GITHUB PAGES AND DOMAIN
 1. Create or select a public GitHub repository intended for this website. Only publish after reviewing the files for private material and receiving approval to make the files public.
